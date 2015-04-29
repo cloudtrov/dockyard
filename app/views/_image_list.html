@@ -1,0 +1,69 @@
+<div class="heading col-md-12" style="margin-bottom:10px">
+	<h3 class="col-md-5" style="padding:0px">Docker Images</h3>
+	<!-- <input type="button" class="fa fa-plus" value="Add Image" > -->
+</div>
+
+<div class="docker-content col-md-12">
+ <table ng-table="tableImage" class="table table-condensed">
+    <tbody ng-repeat="image in $data"  ng-class-odd="'odd'" ng-class-even="'even'">
+        <tr class="main-row" >
+            <td data-title="'Repo'">
+               {{getRepo(image.RepoTags[0])}} 
+            </td>
+             <td data-title="'Tag'">
+               {{getTag(image.RepoTags[0])}} 
+            </td>
+            <td data-title="'Image ID'">
+                {{image.Id | limitTo: 11}}
+            </td>
+            <td data-title="'Created'">
+                {{image.Created}}
+            </td>
+            <td data-title="'Image Size'" >
+                {{image.VirtualSize}}
+            </td>
+            <td data-title="'Actions'">
+            	<a href="" class="fa fa-tag" title="Tag Image" style="color:#404040"></a>
+            	<a href="" class="fa fa-share" style="margin-left:5px;color:#404040"></a>
+            	<a href="" class="fa fa-trash-o" style="margin-left:5px;color:#404040"></a>
+            </td>
+        </tr>
+        <tr class="extra-row" ng-show="activePosition == $index">
+          <td colspan="7">
+          <div class="col-md-12">
+            <input type="button" value="Launch Container" style="float:right" ng-click="createContainer()">
+          </div>
+          </td>
+        </tr>
+        <tbody>
+    </table>
+	<!-- <ul>
+		<li> 
+			  <div class="col-md-6">
+			  <h4>trov-it123</h4>
+			  </div>
+			  <div class="col-md-3 features">
+			  	<i>23days ago</i>
+			  </div>
+			  <div class="col-md-3"></div>
+		</li>
+		<li>
+			<div class="col-md-6">
+			  	<h4>trov-it123</h4>
+			  </div>
+			  <div class="col-md-3 features">
+			  	<i>24days ago</i>
+			  </div>
+			  <div class="col-md-3"></div>
+		</li>
+		<li>
+			<div class="col-md-6">
+			  	<h4>trov-it123</h4>
+			  </div>
+			  <div class="col-md-3 features">
+			  	<i>25days ago</i>
+			  </div>
+			  <div class="col-md-3"></div>
+		</li>
+	</ul> -->
+</div>

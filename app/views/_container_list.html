@@ -1,0 +1,46 @@
+<div class="heading col-md-12" style="margin-bottom:10px">
+  <h3 class="col-md-5" style="padding:0px">Containers</h3>
+  <div class="input-group col-md-4 pull-right" style="margin-top:15px"> 
+    <input type="text" class="form-control" style="border-right:none"ng-model="searchText"/>
+    <span class="input-group-addon"`>
+      <i class="fa fa-search"></i>
+    </span>
+  </div>
+</div>
+<div class="docker-content col-md-12" ng-controller="AboutCtrl">
+  <alert  type="warning" ng-if="containerErrorMessage" close="$dismiss()">Sorry, we couldn't process your operations</alert>
+ <table ng-table="containersTable" class="table table-condensed ">
+    <tbody ng-repeat="container in $data | filter:searchText"  ng-class-odd="'odd'" ng-class-even="'even'">
+        <tr class="main-row">
+            <td data-title="'Name'" >
+                {{container.Names[0]}}
+            </td>
+            <td data-title="'Container ID'">
+               {{container.Id | limitTo: 11}} 
+            </td>
+             <td data-title="'Image'">
+               {{container.Image}} 
+            </td>
+            <td data-title="'Command'">
+                {{container.Command | limitTo: 11}}
+            </td>
+            <td data-title="'Created'" >
+                {{container.Created}}
+            </td>
+            <td data-title="'Status'" >
+                {{container.Status}}
+            </td>
+            <td data-title="'Actions'">
+                <label class="switch switch-success" ng-if="!isRestarting(container.id)" style="margin:0">
+                          <input type="checkbox" class="switch-input"  ng-click="restartContainer(container.Id, container.Status)" ng-checked="containerStatus(container.Status)">
+                          <span class="switch-label"  data-on="On" data-off="Off"></span>
+                          <span class="switch-handle"></span>
+                        </label>
+                <!-- <a href="" class="fa fa-play" ng-if="container.created !='2 hours ago'" style="margin-left:5px;color:green;font-size:12px;text-decoration:none"></a>
+                <a href="" class="fa fa-pause" ng-if="container.created =='2 hours ago'" style="margin-left:5px;color:#404040;font-size:12px;text-decoration:none"></a> -->
+                <a href="" class="fa fa-trash-o" style="margin-left:5px;color:#404040;text-decoration:none"></a>
+            </td>
+        </tr>
+        <tbody>
+    </table>
+</div>

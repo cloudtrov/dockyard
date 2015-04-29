@@ -1,0 +1,35 @@
+<div class="header-logo">
+  <div class="container" >
+     <div class="col-md-2">
+      <img src="/images/docker.png"></img>
+      <!-- <span class="product">Paddle</span> -->
+     </div>
+     <div class="col-md-10">
+      <div class="col-md-3 pull-right" style="padding:0">
+        <div class="profile" style="color:#fff;margin-top:10px;text-align:right">
+      <a href=""  style="text-decoration:none;font-weight:600;color:#606060">
+       Version {{versionInfo.ApiVersion}}
+     </a>
+     <<!-- ul class="dropdown-menu" role="menu" style="margin-top:10px;right:0">
+        <li>
+          <a href="#/settings">
+            <div class="col-md-5 col-sm-10 col-xs-10">
+              Version{{versionInfo.ApiVersion}}
+            </div>
+            <div style="clear:both"></div>
+          </a>
+        </li>
+        <li>
+          <a href="#" ng-click="logoutUser()">
+            <div class="col-md-5 col-sm-10 col-xs-10">
+              Version 0.2
+            </div>
+            <div style="clear:both"></div>
+          </a>
+        </li>
+      </ul> -->
+   </div>
+      </div>
+     </div>
+  </div>
+</div>

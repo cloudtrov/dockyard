@@ -1,0 +1,31 @@
+<div class="home" style="padding-top:50px;margin-top:20px">
+  <div class="container">
+  	<div class="col-md-2" style="margin-top:30px">
+  		<div class="side-pannel">
+  		<ul>
+  			<a href="">
+  			  <li style="background:#8CD490;font-weight:bold;color:#fff">{{dockerInfo.Name}}<i class="fa fa-angle-down pull-right" style="font-size:20px"></i></li>
+  		    </a>
+  		    <a href="" ng-click="dockerSummary()" ng-class="{active: isActive('summary')}">
+  			  <li>Summary</li>
+  			 </a>
+  			 
+  			<a href="" ng-click="imageList()" ng-class="{active: isActive('image')}">
+  			 <li>Images</li>
+  		    </a>
+        <a href="" ng-click="containerList()" ng-class="{active: isActive('container')}">
+          <li>Containers</li>
+        </a>
+  		</ul>
+  	</div>
+  	<div class="sub-nav col-md-12">
+  		<h3>Manage</h3>
+  		<a href="" style="text-decoration:none;">Settings</a>
+  	</div>
+        
+  	</div>
+  	<div class="col-md-10 main-content" style="padding-right:0">
+       <div ng-include src="dockerContent.url"></div>
+  	</div>
+  </div>
+</div>
