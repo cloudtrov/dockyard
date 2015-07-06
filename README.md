@@ -55,15 +55,15 @@ $ sudo docker run --name idock  -it -p "9000:9000" bluemeric/dockyard
 ```
 ## DockYard Dashboard
 
-![Alt text](http://bluemeric.com/img/Dockyard-Dashboard.png "DockYard Dashboard")
+![Alt text](http://bluemeric.com/images/Dockyard-Dashboard.png "DockYard Dashboard")
 
 ## DockYard Images 
 
-![Alt text](http://bluemeric.com/img/DockYard-ImagesList.png "DockYard Images")
+![Alt text](http://bluemeric.com/images/DockYard-ImagesList.png "DockYard Images")
 
 ## DockYard Containers
 
-![Alt text](http://bluemeric.com/img/Dockyard-ContainersList.png "DockYard Containers")
+![Alt text](http://bluemeric.com/images/Dockyard-ContainersList.png "DockYard Containers")
 
 #License
 DockYard is licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) for the full license text.
